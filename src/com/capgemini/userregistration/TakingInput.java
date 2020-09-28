@@ -1,15 +1,14 @@
 package com.capgemini.userregistration;
 
-
 import java.util.Scanner;
 
 public class TakingInput {
-	private static String email;
+	private static String firstName;
+	static Scanner scan = new Scanner(System.in);
 
-	static String read() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("");
-		email = scan.nextLine();
-		return email;
+	static String firstName() {
+		System.out.println("Enter Your First name");
+		firstName = scan.nextLine();
+		return firstName;
 	}
 }
