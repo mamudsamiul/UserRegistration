@@ -4,13 +4,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckFormat {
-	static Pattern pattern = Pattern.compile("");
-	static boolean check(String data) {
+	static Pattern pattern = Pattern.compile("^([A-Z])[a-zA-Z]{2,}$");
+
+	static void check(String data) {
 		Matcher matcher = pattern.matcher(data);
 		boolean matchFound = matcher.find();
 		if (matchFound)
-			return true;
+			System.out.println("Valid first Name");
 		else
-			return false;
+			System.out.println("Invalid first Name");
 	}
 }
