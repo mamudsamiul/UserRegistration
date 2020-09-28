@@ -34,4 +34,14 @@ public class CheckFormat {
 		else
 			System.out.println("Invalid Email");
 	}
+
+	static void checkPhone() {
+		Pattern pattern = Pattern.compile("^91\\s[0-9]{10}$");
+		Matcher matcher = pattern.matcher(TakingInput.phoneNo());
+		boolean matchFound = matcher.find();
+		if (matchFound)
+			System.out.println("Valid Phone Number");
+		else
+			System.out.println("Invalid Phone Number");
+	}
 }
